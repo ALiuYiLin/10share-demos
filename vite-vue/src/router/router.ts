@@ -4,13 +4,28 @@ export const routes:RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/home.vue')
+    component: () => import('@/views/home.vue'),
+    meta: {
+      title: 'home page'
+    }
   },
   {
     path: '/test',
     name: 'test',
-    component: () => import('@/views/test/test.vue')
+    component: () => import('@/views/demo-pages/test/test.vue'),
+    meta: {
+      title: 'test demo page'
+    }
   },
+  {
+    path: '/message',
+    name: 'message',
+    component: () => import('@/views/demo-pages/message/message.vue'),
+    meta: {
+      title: 'message encapsulation demo page'
+    }
+  },
+  
 ]
 
 export const router = createRouter({
@@ -23,3 +38,8 @@ export const routerPush = (to: RouteLocationRaw | string): void => {
   router.push(typeof to === 'string' ? {path:to} : to)
 }
 
+
+export const currentPageTitle =  ()=>{
+  const title = router.currentRoute.value.meta.title
+  return title ? title : ''
+}
