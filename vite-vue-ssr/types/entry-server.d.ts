@@ -1,0 +1,1 @@
+export async function render(url: string, manifest: any): Promise<(string | string[])[]>
