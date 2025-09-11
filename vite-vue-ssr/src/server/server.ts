@@ -2,34 +2,30 @@ import path from "path";
 import { fileURLToPath } from "url";
 import fs from 'fs'
 import express from 'express'
+import serveStatic from 'serve-static'
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const projectRoot = path.resolve(__dirname,"..")
+
+const resolve = (p:string) => path.resolve(projectRoot,p)
+
 
 export async function createServer(
   root: string = process.cwd(),
-  isProd: boolean = process.env.NODE_ENV === 'production',
+  isDev: boolean = process.env.NODE_ENV?.trim() === 'development',
   hrmPort?: number
 ){
-  const __dirname = path.dirname(fileURLToPath(import.meta.url))
-  console.log('isProd: ', isProd);
 
-  const resolve = (p:string) => path.resolve(__dirname,p)
 
-  const indexProd = isProd 
-  ? fs.readFileSync(
-    resolve('dist/client/index.html'),'utf-8')
-  : ''
+  const indexProd = isDev ? '' : fs.readFileSync(resolve('client/index.html'),'utf-8')
 
-  const manifest = isProd
-  ? JSON.parse(
-    fs.readFileSync(
-      resolve('dist/client/.vite/ssr-manifest.json'),'utf-8')
-  )
-  : ''  
+  const manifest = !isDev ? JSON.parse(fs.readFileSync(resolve('client/.vite/ssr-manifest.json'),'utf-8')) : ''  
 
   const app = express()
 
   let vite 
 
-  if(!isProd){
+  if(isDev){
     vite = await ( await import('vite') )
     .createServer({
       root,
@@ -50,32 +46,34 @@ export async function createServer(
     app.use(vite.middlewares)
   } else {
     app.use((await import('compression')).default())
-    app.use(
-      (await import('serve-static')).default(resolve('dist/client'),{
-        index: false
-      })
-    )
+    app.use('/assets',serveStatic(resolve('client/assets')))
   }
 
 
-  app.use('*all', async(req, res) =>{
+  app.use('*all', async(req, res, next) =>{
     try{
       // const url = req.originalUrl.replace('/test/','/')
       const url = req.originalUrl
-      let template, render
-      if(!isProd){
+      if(url.startsWith('/assets')){
+        next()
+      }
 
-        template = fs.readFileSync(resolve('index.html'),'utf-8')
+      let template, render
+      if(isDev){
+
+        template = fs.readFileSync(resolve('../index.html'),'utf-8')
 
         template = await vite!.transformIndexHtml(url,template)
 
-        render = (await vite!.ssrLoadModule('/src/entry-server.js')).render
+        render = (await vite!.ssrLoadModule('./entry-server')).render
 
       }else {
         template = indexProd
-        render = (await import('./src/server/entry-server')).render
+        render = (await import('./entry-server')).render
       }
+
       const [appHtml, preloadLinks] = await render(url, manifest)
+  
 
       const html =  template
       .replace(`<!--preload-links-->`, preloadLinks)
@@ -86,7 +84,7 @@ export async function createServer(
       res.status(500).end(e.stack)
     }
 
-   
+
   })
 
   return { app, vite}

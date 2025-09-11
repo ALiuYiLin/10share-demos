@@ -10,6 +10,6 @@
   },
   "include": [
     "**/*",
-    "./dist/server/entry-server.d.ts"
+    "dist/vite-vue-ssr/server/entry-server.d.ts"
   ]
 }
