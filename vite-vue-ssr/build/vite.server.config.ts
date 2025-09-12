@@ -6,11 +6,17 @@ const pkgRoot = path.resolve(__dirname,'../src/server')
 const pattern = pkgRoot.replace(/\\/g,'/')+'/**/*.{vue,ts,js}'
 const inputFiles = glob.sync(pattern)
 export default defineConfig(()=>({
+  resolve:{
+    alias:{
+      "@/*":"./src"
+    }
+  },
   build:{
     ssr: true,
     rollupOptions:{
       input: inputFiles,
     },
+    // assetsDir:"../client/assets/[name]-[hash].",
     outDir: "./dist/vite-vue-ssr/server"
   },
   // base,
