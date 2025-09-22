@@ -94,6 +94,7 @@ export async function createServer(
 
 createServer().then(({app})=>{
   app.listen(5173,()=>{
+    console.log("@@@");
     console.log(`http://localhost:5173`)
   })
 })

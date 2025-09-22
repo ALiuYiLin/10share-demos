@@ -8,7 +8,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build -c build/vite.client.config.ts",
     "build:server": "vite build -c build/vite.server.config.ts ",
-    "dev": "set NODE_ENV=development && ts-node   --project ./tsconfig.json  src/server/server ",
+    "dev": "set NODE_ENV=development && tsx ./src/server/server.ts ",
     "serve": "set NODE_ENV=production && ts-node server",
     "start": "node dist/vite-vue-ssr/server/server.js"
   },
@@ -40,6 +40,9 @@
     "rollup-plugin-esbuild": "^6.2.1",
     "rollup-plugin-vue": "^6.0.0",
     "serve-static": "^2.2.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
     "vite": "^7.1.4"
   }
 }
