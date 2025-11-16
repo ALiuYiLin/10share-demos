@@ -25,6 +25,14 @@ export const routes:RouteRecordRaw[] = [
       title: 'message encapsulation demo page'
     }
   },
+  {
+    path: '/perm',
+    name: 'perm',
+    component: () => import('@/views/demo-pages/perm/index.vue'),
+    meta: {
+      title: 'message encapsulation demo page'
+    }
+  }
   
 ]
 
