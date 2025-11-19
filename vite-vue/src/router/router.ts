@@ -6,7 +6,7 @@ export const routes:RouteRecordRaw[] = [
     name: 'home',
     component: () => import('@/views/home.vue'),
     meta: {
-      title: 'home page'
+      title: '首页'
     }
   },
   {
@@ -14,7 +14,7 @@ export const routes:RouteRecordRaw[] = [
     name: 'test',
     component: () => import('@/views/demo-pages/test/test.vue'),
     meta: {
-      title: 'test demo page'
+      title: '测试页'
     }
   },
   {
@@ -22,7 +22,7 @@ export const routes:RouteRecordRaw[] = [
     name: 'message',
     component: () => import('@/views/demo-pages/message/message.vue'),
     meta: {
-      title: 'message encapsulation demo page'
+      title: '消息封装页'
     }
   },
   {
@@ -30,7 +30,7 @@ export const routes:RouteRecordRaw[] = [
     name: 'perm',
     component: () => import('@/views/demo-pages/perm/index.vue'),
     meta: {
-      title: 'message encapsulation demo page'
+      title: '权限封装页'
     }
   }
   
@@ -39,6 +39,11 @@ export const routes:RouteRecordRaw[] = [
 export const router = createRouter({
   history: createWebHistory(),
   routes
+})
+
+// 全局路由守卫
+router.afterEach((to) => {
+  document.title = to.meta.title as string || '10share-demos'
 })
 
 
