@@ -1,20 +1,21 @@
+import type { UseDragOptions } from "@/composables";
 import type { Ref } from "vue";
 export type DragState = {
   isDragging: boolean;
   offsetX: number;
   offsetY: number;
+  downRect: DOMRect | null;
 }
 export type DragDom = Ref<HTMLDivElement | null>;
 // 鼠标按下：开始拖拽
 export const handleMouseDown = (e: MouseEvent, target: DragDom, dragState: DragState) => {
   if (!target.value) return;
   
-
-
   dragState.isDragging = true;
   const rect = target.value.getBoundingClientRect();
   dragState.offsetX = e.clientX - rect.left;
   dragState.offsetY = e.clientY - rect.top;
+  dragState.downRect = rect;
 
   // 可选：添加临时样式反馈
   target.value.style.cursor = 'grabbing';
@@ -47,3 +48,14 @@ export const handleMouseUp = (target: DragDom, dragState: DragState) => {
   }
 };
 
+/**
+   * 文档指针按下事件处理函数
+   * @param e 指针事件
+   */  
+export const onDocumentPointerDown = (e: PointerEvent | MouseEvent, target: DragDom,options: UseDragOptions) => {
+  if (!target.value) return;
+  const targetNode = e.target as Node;
+  if (!target.value.contains(targetNode)) { 
+    options?.onOutsideClick?.(e);
+  }
+};
