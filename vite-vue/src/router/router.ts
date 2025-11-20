@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory, type RouteLocationRaw, type RouteRecordRaw } from 'vue-router'
+import { Paths } from './path'
 
 export const routes:RouteRecordRaw[] = [
   {
-    path: '/',
+    path: Paths.home,
     name: 'home',
     component: () => import('@/views/home.vue'),
     meta: {
@@ -10,7 +11,7 @@ export const routes:RouteRecordRaw[] = [
     }
   },
   {
-    path: '/test',
+    path: Paths.demo_test,
     name: 'test',
     component: () => import('@/views/demo-pages/test/test.vue'),
     meta: {
@@ -18,7 +19,7 @@ export const routes:RouteRecordRaw[] = [
     }
   },
   {
-    path: '/message',
+    path: Paths.demo_message,
     name: 'message',
     component: () => import('@/views/demo-pages/message/message.vue'),
     meta: {
@@ -26,7 +27,7 @@ export const routes:RouteRecordRaw[] = [
     }
   },
   {
-    path: '/perm',
+    path: Paths.demo_perm,
     name: 'perm',
     component: () => import('@/views/demo-pages/perm/index.vue'),
     meta: {

@@ -5,7 +5,8 @@ interface Props {
     label: string;
   }[];
 }
-defineProps<Props>()
+const props = defineProps<Props>()
+console.log('props: ', props);
 defineEmits<{
   (e: 'select', key: string): void;
 }>()

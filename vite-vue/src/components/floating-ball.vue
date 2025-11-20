@@ -3,8 +3,9 @@ import { useDrag } from '@/composables';
 import { type DragState } from '@/utils';
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import BallMenu from './ball-menu.vue';
+import { MENUS } from '@/router/menu';
 type MenuItem = { label: string; key: string };
-
+import { router} from '@/router';
 const ballRef = ref<HTMLDivElement | null>(null);
 const dragState: DragState = {
   isDragging: false,
@@ -17,11 +18,7 @@ const showMenu = ref(false);
 
 const props = defineProps<{ items?: MenuItem[] }>();
 const emit = defineEmits<{ (e: 'select', key: string): void }>();
-const defaultItems: MenuItem[] = [
-  { label: '首页', key: 'home' },
-  { label: '设置', key: 'settings' },
-  { label: '帮助', key: 'help' },
-];
+const defaultItems: MenuItem[] = MENUS;
 const menuItems = computed(() => props.items ?? defaultItems);
 
 const dragComposable = useDrag(ballRef, dragState, {
@@ -46,6 +43,8 @@ const onDocumentPointerDown = (e: PointerEvent | MouseEvent) => {
 
 
 const onSelect = (key: string) => {
+  router.push({ path: key });
+  console.log('key: ', key);
   emit('select', key);
   showMenu.value = false;
 };
@@ -73,9 +72,9 @@ onUnmounted(() => {
     +
     <Transition name="ball-menu">
       <BallMenu
-        v-if="showMenu"
+        v-show="showMenu"
         :menuItems="menuItems"
-        @select="onSelect"
+        @select="(key) => onSelect(key)"
       />
     </Transition>
   </div>
