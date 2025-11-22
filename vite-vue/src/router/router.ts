@@ -33,6 +33,14 @@ export const routes:RouteRecordRaw[] = [
     meta: {
       title: '权限封装页'
     }
+  },
+  {
+    path: Paths.demo_promise,
+    name: 'promise',
+    component: () => import('@/views/demo-pages/promise/index.vue'),
+    meta: {
+      title: 'Promise封装页'
+    }
   }
   
 ]

@@ -5,6 +5,7 @@ export const demo_test = '/demo/test';
 export const demo_home = '/demo/home';
 export const demo_message = '/demo/message';
 export const demo_perm = '/demo/perm';
+export const demo_promise = '/demo/promise';
 export const home = '/';
 
 export const Paths = {
@@ -12,5 +13,6 @@ export const Paths = {
   demo_home,
   demo_message,
   demo_perm,
+  demo_promise,
   home,
 }
