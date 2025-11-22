@@ -15,7 +15,7 @@ const [load, loadState] = usePromise(async () => {
   const res = await getDataApi();
   data.value = res; 
 });
-
+ 
 </script>
 
 <template>

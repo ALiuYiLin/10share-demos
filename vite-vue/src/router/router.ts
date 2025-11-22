@@ -41,7 +41,15 @@ export const routes:RouteRecordRaw[] = [
     meta: {
       title: 'Promise封装页'
     }
-  }
+  },
+  {
+    path: Paths.demo_dialog,
+    name: 'dialog',
+    component: () => import('@/views/demo-pages/dialog/index.vue'),
+    meta: {
+      title: '对话框封装页'
+    }
+  },
   
 ]
 

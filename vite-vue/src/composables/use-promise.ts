@@ -1,6 +1,5 @@
 import { ref, type Ref } from "vue";
 
-
 export type PromiseStatus = 'idle' | 'pending' | 'fulfilled' | 'rejected';
 
 type UsePromiseReturn<Args extends any[]> = [
@@ -23,8 +22,5 @@ export function usePromise<Args extends any[]>(
       throw error
     }
   }
-  return [load, status]
+  return [load, status] as const
 }
-
-
-
