@@ -11,7 +11,7 @@ export const routes: AppRouteObject[] = [
       ROUTES.HOME_ROUTE,
       ROUTES.ABOUT_ROUTE,
       ROUTES.NOT_FOUND_ROUTE,
-      ROUTES.DEMO_ROUTE
+      ROUTES.MSG_ROUTE
     ],
   },
 ];

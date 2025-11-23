@@ -25,68 +25,68 @@ export const NOT_FOUND_ROUTE: AppRouteObject = {
   },
 };
 
-export const DEMO_PROPS_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoProps),
-  path: "/demo/props",
+export const MSG_PROPS_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgProps),
+  path: "/msg/props",
   handle: {
     title: "演示",
   },
 };
 
-export const DEMO_CALLBACK_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoCallBack),
-  path: "/demo/callback",
+export const MSG_CALLBACK_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgCallBack),
+  path: "/msg/callback",
   handle: {
     title: "演示",
   },
 };
 
-export const DEMO_STATE_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoState),
-  path: "/demo/state",
+export const MSG_STATE_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgState),
+  path: "/msg/state",
   handle: {
     title: "演示",
   },
 };
 
-export const DEMO_CONTEXT_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoContext),
-  path: "/demo/context",
+export const MSG_CONTEXT_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgContext),
+  path: "/msg/context",
   handle: {
     title: "演示",
   },
 };
 
-export const DEMO_STORET_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoStore),
-  path: "/demo/store",
+export const MSG_STORET_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgStore),
+  path: "/msg/store",
   handle: {
     title: "演示",
   },
 };
 
-export const DEMO_BUS_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.DemoBus),
-  path: "/demo/bus",
+export const MSG_BUS_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.MsgBus),
+  path: "/msg/bus",
   handle: {
     title: "演示",
   },
 };
 
 
-export const DEMO_ROUTE: AppRouteObject = {
-  element: lazyLoad(Pages.Demo),
-  path: "/demo",
+export const MSG_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.Msg),
+  path: "/msg",
   handle: {
     title: "演示",
   },
   children: [
-    DEMO_PROPS_ROUTE,
-    DEMO_CALLBACK_ROUTE,
-    DEMO_STATE_ROUTE,
-    DEMO_CONTEXT_ROUTE,
-    DEMO_STORET_ROUTE,
-    DEMO_BUS_ROUTE
+    MSG_PROPS_ROUTE,
+    MSG_CALLBACK_ROUTE,
+    MSG_STATE_ROUTE,
+    MSG_CONTEXT_ROUTE,
+    MSG_STORET_ROUTE,
+    MSG_BUS_ROUTE
   ],
 };
 
@@ -95,6 +95,6 @@ export const ROUTES = {
   HOME_ROUTE,
   ABOUT_ROUTE,
   NOT_FOUND_ROUTE,
-  DEMO_ROUTE,
-  DEMO_PROPS_ROUTE,
+  MSG_ROUTE,
+  MSG_PROPS_ROUTE,
 };

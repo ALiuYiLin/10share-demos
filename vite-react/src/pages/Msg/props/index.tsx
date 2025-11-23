@@ -1,7 +1,7 @@
-const DemoProps = () => {
+const MsgProps = () => {
   return (
-    <div className="demo-props">
-      <h1>父组件像子组件传值（Props）</h1>
+    <div className="msg-props">
+      <h2>父组件像子组件传值（Props）</h2>
       <Parent></Parent>
     </div>
   );
@@ -12,7 +12,7 @@ function Parent() {
 }
 
 function Child({ message }: { message: string }) {
-  return <h1>{message}</h1>;
+  return <p>{message}</p>;
 }
 
-export default DemoProps;
+export default MsgProps;
