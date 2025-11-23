@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Outlet, useMatches, type UIMatch } from "react-router-dom";
-import type { PageHandle } from "../router/routes";
+import type { PageHandle } from "@/router";
 
 const DefaultLayout = () => {
   const matches = useMatches() as UIMatch<unknown, PageHandle>[];
