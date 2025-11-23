@@ -4,13 +4,17 @@ const About = React.lazy(()=>import('@/pages/About'))
 const Home = React.lazy(()=>import('@/pages/Home'))
 const NotFound = React.lazy(()=>import('@/pages/NotFound'))
 const DefaultLayout = React.lazy(()=>import('@/layout'))
+const Demo = React.lazy(()=>import('@/pages/Demo'))
+const DemoProps = React.lazy(()=>import('@/pages/Demo/props'))
 
 
 export const Pages = {
   About,
   Home,
   NotFound,
-  DefaultLayout
+  DefaultLayout,
+  Demo,
+  DemoProps
 }
 
 export function lazyLoad(Page:React.LazyExoticComponent<() => JSX.Element>) {

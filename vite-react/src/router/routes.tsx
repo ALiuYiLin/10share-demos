@@ -10,7 +10,8 @@ export const routes: AppRouteObject[] = [
     children: [
       ROUTES.HOME_ROUTE,
       ROUTES.ABOUT_ROUTE,
-      ROUTES.NOT_FOUND_ROUTE
+      ROUTES.NOT_FOUND_ROUTE,
+      ROUTES.DEMO_ROUTE
     ],
   },
 ];
