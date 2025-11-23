@@ -1,26 +1,15 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import NotFound from "../pages/NotFound";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  type RouteObject,
+} from "react-router-dom";
+import { routes } from "./routes";
 
+const router = createBrowserRouter(routes as RouteObject[]);
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/about',
-    element: <About />
-  },
-  {
-    path: '*',
-    element: <NotFound />
-  }
-])
+const AppRouter = () => {
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
-const AppRouter = ()=> {
-  return <RouterProvider  router={router}></RouterProvider>
-}
-
-export default AppRouter
+export type { PageHandle, AppRouteObject } from "./routes";
+export default AppRouter;
