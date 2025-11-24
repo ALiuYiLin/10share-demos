@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useMatches, type UIMatch } from "react-router-dom";
 import type { PageHandle } from "@/router";
+import FloatingMenu from "./floating-menu";
 
 const DefaultLayout = () => {
   const matches = useMatches() as UIMatch<unknown, PageHandle>[];
@@ -14,6 +15,7 @@ const DefaultLayout = () => {
     <>
       <header></header>
       <main>
+        <FloatingMenu/>
         <Outlet></Outlet>
       </main>
       <footer></footer>

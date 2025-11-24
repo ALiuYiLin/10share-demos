@@ -3,6 +3,7 @@ import type { AppRouteObject } from "./types";
 
 export const HOME_ROUTE: AppRouteObject = {
   index: true,
+  path: '',
   element: lazyLoad(Pages.Home),
   handle: {
     title: "首页",
@@ -29,7 +30,7 @@ export const MSG_PROPS_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgProps),
   path: "/msg/props",
   handle: {
-    title: "演示",
+    title: "props",
   },
 };
 
@@ -37,7 +38,7 @@ export const MSG_CALLBACK_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgCallBack),
   path: "/msg/callback",
   handle: {
-    title: "演示",
+    title: "callback",
   },
 };
 
@@ -45,7 +46,7 @@ export const MSG_STATE_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgState),
   path: "/msg/state",
   handle: {
-    title: "演示",
+    title: "state",
   },
 };
 
@@ -53,7 +54,7 @@ export const MSG_CONTEXT_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgContext),
   path: "/msg/context",
   handle: {
-    title: "演示",
+    title: "context",
   },
 };
 
@@ -61,7 +62,7 @@ export const MSG_STORET_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgStore),
   path: "/msg/store",
   handle: {
-    title: "演示",
+    title: "store",
   },
 };
 
@@ -69,7 +70,7 @@ export const MSG_BUS_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.MsgBus),
   path: "/msg/bus",
   handle: {
-    title: "演示",
+    title: "bus",
   },
 };
 
@@ -78,7 +79,7 @@ export const MSG_ROUTE: AppRouteObject = {
   element: lazyLoad(Pages.Msg),
   path: "/msg",
   handle: {
-    title: "演示",
+    title: "通信",
   },
   children: [
     MSG_PROPS_ROUTE,
