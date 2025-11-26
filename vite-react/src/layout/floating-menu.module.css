@@ -1,7 +1,7 @@
 .floating-container {
   position: fixed;
-  left: 0;
-  top: 0;
+  right: 10%;
+  bottom: 10%;
   width: fit-content;
   height: fit-content;
 }
@@ -10,8 +10,6 @@
   position: relative;
   width: 60px;
   height: 60px;
-  top: 20px; /* 初始位置 */
-  left: 20px; /* 初始位置 */
   background: #ff6b6b;
   border-radius: 50%;
   display: flex;
