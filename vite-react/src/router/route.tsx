@@ -100,11 +100,19 @@ export const I18N_ROUTE: AppRouteObject = {
   },
 };
 
+export const DESIGN_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.Design),
+  path: "/design",
+  handle: {
+    title: "设计",
+  },
+};
 export const ROUTES = {
   HOME_ROUTE,
   ABOUT_ROUTE,
   NOT_FOUND_ROUTE,
   MSG_ROUTE,
   MSG_PROPS_ROUTE,
-  I18N_ROUTE
+  I18N_ROUTE,
+  DESIGN_ROUTE
 };

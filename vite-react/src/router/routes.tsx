@@ -12,7 +12,8 @@ export const routes: AppRouteObject[] = [
       ROUTES.ABOUT_ROUTE,
       ROUTES.NOT_FOUND_ROUTE,
       ROUTES.MSG_ROUTE,
-      ROUTES.I18N_ROUTE
+      ROUTES.I18N_ROUTE,
+      ROUTES.DESIGN_ROUTE
     ],
   },
 ];

@@ -12,6 +12,7 @@ const MsgContext = React.lazy(()=>import('@/pages/Msg/context'))
 const MsgStore = React.lazy(()=>import('@/pages/Msg/store'))
 const MsgBus = React.lazy(()=>import('@/pages/Msg/bus'))
 const I18n = React.lazy(()=>import('@/pages/I18n'))
+const Design = React.lazy(()=>import('@/pages/Design'))
 
 
 export const Pages = {
@@ -26,7 +27,8 @@ export const Pages = {
   MsgContext,
   MsgStore,
   MsgBus,
-  I18n
+  I18n,
+  Design
 }
 
 export function lazyLoad(Page:React.LazyExoticComponent<() => JSX.Element>) {
