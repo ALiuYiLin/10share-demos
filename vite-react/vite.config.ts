@@ -9,5 +9,15 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname,'src')
     }
+  },
+  server: {
+    // 开发环境代理，解决跨域问题
+    proxy: {
+      '/locales': {
+        target: 'http://localhost:5173',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/locales/, '/src/locales')
+      }
+    }
   }
 })

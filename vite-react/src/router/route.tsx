@@ -92,10 +92,19 @@ export const MSG_ROUTE: AppRouteObject = {
 };
 
 
+export const I18N_ROUTE: AppRouteObject = {
+  element: lazyLoad(Pages.I18n),
+  path: "/i18n",
+  handle: {
+    title: "国际化",
+  },
+};
+
 export const ROUTES = {
   HOME_ROUTE,
   ABOUT_ROUTE,
   NOT_FOUND_ROUTE,
   MSG_ROUTE,
   MSG_PROPS_ROUTE,
+  I18N_ROUTE
 };
