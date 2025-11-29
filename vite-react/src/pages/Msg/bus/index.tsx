@@ -18,7 +18,7 @@ const Bus = () => {
 function ComponentA() {
   return (
     <button onClick={() => emitter.emit("message", "A: hello component B")}>
-      触发事件：像B组件传递消息
+      触发事件：向B组件传递消息
     </button>
   );
 }

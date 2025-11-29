@@ -8,11 +8,7 @@ export const routes: AppRouteObject[] = [
     path: "/",
     element: lazyLoad(Pages.DefaultLayout),
     children: [
-      ROUTES.HOME_ROUTE,
-      ROUTES.ABOUT_ROUTE,
-      ROUTES.NOT_FOUND_ROUTE,
-      ROUTES.MSG_ROUTE,
-      ROUTES.I18N_ROUTE
+      ...Object.values(ROUTES)
     ],
   },
 ];

@@ -7,7 +7,7 @@ const useStore = create((set) => ({
 const Store = ()=>{
   return (
     <div>
-      <h1>全局状态管理-zustand</h1>
+      <h2>全局状态管理-zustand</h2>
       <Counter></Counter>
     </div>
   )
@@ -18,7 +18,7 @@ function Counter() {
   return (
     <div>
       <p>{count}</p>
-      <button onClick={increment}>+++</button>
+      <button onClick={increment}>加</button>
     </div>
   )
 }
