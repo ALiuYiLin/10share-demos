@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{title}}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    label { display:block; margin-top: 1rem; }
+    input { padding: 6px 8px; }
+    .actions { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <h2>创建新条目</h2>
+  <form>
+    <label>名称 <input type="text" name="name" placeholder="名称" /></label>
+    <label>描述 <input type="text" name="desc" placeholder="描述" /></label>
+    <div class="actions">
+      <button type="submit">提交</button>
+    </div>
+  </form>
+</body>
+</html>

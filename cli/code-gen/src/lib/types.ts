@@ -13,6 +13,7 @@ export type CodeGenConfig = {
   outputBase?: string
   partialsDir?: string
   helpers?: string[]
+  globalData?: unknown
   generators: GeneratorConfig[]
 }
 

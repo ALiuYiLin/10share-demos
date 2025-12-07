@@ -4,6 +4,9 @@ const config = {
   outputBase: "dist",
   partialsDir: "template/partials",
   helpers: ["template/helpers/index.ts"],
+  globalData: {
+    title: "共享标题：演示页面123"
+  },
   generators: [
     {
       name: "model",
@@ -29,6 +32,26 @@ const config = {
         ]
       },
       outFile: "index.html",
+      skipIfExists: false
+    },
+    {
+      name: "todoPage",
+      template: "template/html/todo.hbs",
+      data: {
+        todos: [
+          { text: "完善 README", done: false },
+          { text: "实现数据合并", done: true },
+          { text: "增加集成测试", done: false }
+        ]
+      },
+      outFile: "todo.html",
+      skipIfExists: false
+    },
+    {
+      name: "newPage",
+      template: "template/html/new.hbs",
+      data: {},
+      outFile: "new.html",
       skipIfExists: false
     }
   ]

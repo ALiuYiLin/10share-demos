@@ -37,9 +37,11 @@ export async function runGenerators(cfg: CodeGenConfig, opts: RunOptions, cwd: s
   const res: GenerateResult = { generated: 0, skipped: 0, overwritten: 0, appended: 0, items: [] }
   const only = opts.only && opts.only.length ? new Set(opts.only) : null
   const base = cfg.outputBase ?? "dist"
+  const globalCtx = await readData(cfg.globalData, cwd)
   for (const g of cfg.generators) {
     if (only && !only.has(g.name)) continue
-    const ctx = await readData(g.data, cwd)
+    const pageCtx = await readData(g.data, cwd)
+    const ctx = { ...(globalCtx || {}), ...(pageCtx || {}) }
     let ok = true
     if (typeof g.condition === "boolean") ok = g.condition
     if (typeof g.condition === "function") ok = !!(g.condition as any)(ctx)
