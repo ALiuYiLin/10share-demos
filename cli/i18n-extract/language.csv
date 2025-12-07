@@ -1,0 +1,68 @@
+中文,en,es,fr,de,pt-BR,ru,ja,ko,ar,it,hi,zh-TW
+按钮,button,botón,bouton,Schaltfläche,botão,кнопка,ボタン,버튼,زر,pulsante,बटन,按鈕
+查看,view,ver,voir,Anzeigen,visualizar,Просмотреть,表示,보기,عرض,Visualizza,देखें,檢視
+登录,Login,Iniciar sesión,Connexion,Anmelden,Entrar,Войти,ログイン,로그인,تسجيل الدخول,Accesso,लॉगिन,登入
+注销,Logout,Cerrar sesión,Déconnexion,Abmelden,Sair,Выйти,ログアウト,로그아웃,تسجيل الخروج,Uscita,लॉगआउट,登出
+注册,Register,Registrarse,S'inscrire,Registrieren,Cadastrar,Зарегистрироваться,登録,회원가입,تسجيل,Registrarsi,पंजीकरण,註冊
+用户,User,Usuario,Utilisateur,Benutzer,Usuário,Пользователь,ユーザー,사용자,مستخدم,Utente,उपयोगकर्ता,使用者
+角色,Role,Rol,Rôle,Rolle,Função,Роль,ロール,역할,دور,Ruolo,भूमिका,角色
+权限,Permission,Permiso,Autorisation,Berechtigung,Permissão,Разрешение,権限,권한,صلاحية,Permesso,अनुमति,權限
+仪表盘,Dashboard,Panel,Tableau de bord,Dashboard,Painel,Панель управления,ダッシュボード,대시보드,لوحة التحكم,Dashboard,डैशबोर्ड,儀表板
+报表,Reports,Informes,Rapports,Berichte,Relatórios,Отчёты,レポート,보고서,تقارير,Report,रिपोर्ट,報表
+通知,Notifications,Notificaciones,Notifications,Benachrichtigungen,Notificações,Уведомления,通知,알림,إشعارات,Notifiche,सूचनाएँ,通知
+搜索,Search,Buscar,Rechercher,Suchen,Pesquisar,Поиск,検索,검색,بحث,Cerca,खोज,搜尋
+筛选,Filter,Filtrar,Filtrer,Filtern,Filtrar,Фильтр,絞り込み,필터,تصفية,Filtra,फ़िल्टर,篩選
+保存,Save,Guardar,Enregistrer,Speichern,Salvar,Сохранить,保存,저장,حفظ,Salva,सहेजें,儲存
+取消,Cancel,Cancelar,Annuler,Abbrechen,Cancelar,Отменить,キャンセル,취소,إلغاء,Annulla,रद्द करें,取消
+删除,Delete,Eliminar,Supprimer,Löschen,Excluir,Удалить,削除,삭제,حذف,Elimina,हटाएं,刪除
+编辑,Edit,Editar,Modifier,Bearbeiten,Editar,Редактировать,編集,편집,تعديل,Modifica,संपादित करें,編輯
+创建,Create,Crear,Créer,Erstellen,Criar,Создать,作成,생성,إنشاء,Crea,बनाएँ,建立
+更新,Update,Actualizar,Mettre à jour,Aktualisieren,Atualizar,Обновить,更新,업데이트,تحديث,Aggiorna,अपडेट,更新
+提交,Submit,Enviar,Soumettre,Absenden,Enviar,Отправить,送信,제출,إرسال,Invia,सबमिट,提交
+重置,Reset,Restablecer,Réinitialiser,Zurücksetzen,Redefinir,Сбросить,リセット,초기화,إعادة تعيين,Reimposta,रीसेट,重設
+上传,Upload,Subir,Téléverser,Hochladen,Carregar,Загрузить,アップロード,업로드,رفع,Carica,अपलोड,上傳
+下载,Download,Descargar,Télécharger,Herunterladen,Baixar,Скачать,ダウンロード,다운로드,تنزيل,Scarica,डाउनलोड,下載
+导入,Import,Importar,Importer,Importieren,Importar,Импорт,インポート,가져오기,استيراد,Importa,आयात,匯入
+导出,Export,Exportar,Exporter,Exportieren,Exportar,Экспорт,エクスポート,내보내기,تصدير,Esporta,निर्यात,匯出
+状态,Status,Estado,Statut,Status,Status,Статус,ステータス,상태,الحالة,Stato,स्थिति,狀態
+启用,Enable,Habilitar,Activer,Aktivieren,Habilitar,Включить,有効化,활성화,تمكين,Abilita,सक्रिय करें,啟用
+禁用,Disable,Deshabilitar,Désactiver,Deaktivieren,Desabilitar,Отключить,無効化,비활성화,تعطيل,Disabilita,अक्षम करें,停用
+活跃,Active,Activo,Actif,Aktiv,Ativo,Активный,アクティブ,활성,نشط,Attivo,सक्रिय,活躍
+未激活,Inactive,Inactivo,Inactif,Inaktiv,Inativo,Неактивный,非アクティブ,비활성,غير نشط,Inattivo,निष्क्रिय,未啟用
+成功,Success,Éxito,Succès,Erfolg,Sucesso,Успех,成功,성공,نجاح,Successo,सफलता,成功
+错误,Error,Error,Erreur,Fehler,Erro,Ошибка,エラー,오류,خطأ,Errore,त्रुटि,錯誤
+警告,Warning,Advertencia,Avertissement,Warnung,Aviso,Предупреждение,警告,경고,تحذير,Avviso,चेतावनी,警告
+信息,Info,Información,Info,Info,Informações,Информация,情報,정보,معلومات,Informazioni,जानकारी,資訊
+重试,Retry,Reintentar,Réessayer,Erneut versuchen,Tentar novamente,Повторить,再試行,재시도,إعادة المحاولة,Riprova,पुनः प्रयास,重試
+确认,Confirm,Confirmar,Confirmer,Bestätigen,Confirmar,Подтвердить,確認,확인,تأكيد,Conferma,पुष्टि करें,確認
+关闭,Close,Cerrar,Fermer,Schließen,Fechar,Закрыть,閉じる,닫기,إغلاق,Chiudi,बंद करें,關閉
+打开,Open,Abrir,Ouvrir,Öffnen,Abrir,Открыть,開く,열기,فتح,Apri,खोलें,開啟
+详情,Details,Detalles,Détails,Details,Detalhes,Подробнее,詳細,세부정보,تفاصيل,Dettagli,विवरण,詳細
+列表,List,Lista,Liste,Liste,Lista,Список,一覧,목록,قائمة,Elenco,सूची,清單
+添加,Add,Añadir,Ajouter,Hinzufügen,Adicionar,Добавить,追加,추가,إضافة,Aggiungi,जोड़ें,新增
+移除,Remove,Eliminar,Retirer,Entfernen,Remover,Удалить,削除,제거,إزالة,Rimuovi,हटाएँ,移除
+分配,Assign,Asignar,Attribuer,Zuweisen,Atribuir,Назначить,割り当て,할당,تعيين,Assegna,असाइन करें,分配
+取消分配,Unassign,Desasignar,Désattribuer,Zuweisung aufheben,Desatribuir,Снять назначение,割り当て解除,할당 취소,إلغاء التعيين,Rimuovi assegnazione,असाइन हटाएँ,取消分配
+审批,Approve,Aprobar,Approuver,Genehmigen,Aprovar,Одобрить,承認,승인,اعتماد,Approva,मंज़ूर करें,核准
+拒绝,Reject,Rechazar,Rejeter,Ablehnen,Rejeitar,Отклонить,却下,거절,رفض,Rifiuta,अस्वीकार,拒絕
+待处理,Pending,Pendiente,En attente,Ausstehend,Pendente,В ожидании,保留中,대기중,قيد الانتظار,In sospeso,लंबित,待處理
+处理中,Processing,Procesando,Traitement,Wird verarbeitet,Processando,Обработка,処理中,처리중,تتم المعالجة,Elaborazione,प्रक्रिया में,處理中
+已完成,Completed,Completado,Terminé,Abgeschlossen,Concluído,Завершено,完了,완료,مكتمل,Completato,पूर्ण,已完成
+系统设置,System Settings,Configuración del sistema,Paramètres du système,Systemeinstellungen,Configurações do sistema,Настройки системы,システム設定,시스템 설정,إعدادات النظام,Impostazioni di sistema,सिस्टम सेटिंग्स,系統設定
+服务器,Server,Servidor,Serveur,Server,Servidor,Сервер,サーバー,서버,خادم,Server,सर्वर,伺服器
+配置,Configuration,Configuración,Configuration,Konfiguration,Configuração,Конфигурация,設定,구성,إعداد,Configurazione,कॉन्फ़िगरेशन,設定
+版本,Version,Versión,Version,Version,Versão,Версия,バージョン,버전,إصدار,Versione,संस्करण,版本
+日志,Logs,Registros,Journaux,Protokolle,Logs,Логи,ログ,로그,السجلات,Log,लॉग,日誌
+异常,Exception,Excepción,Exception,Ausnahme,Exceção,Исключение,例外,예외,استثناء,Eccezione,अपवाद,例外
+超时,Timeout,Tiempo de espera,Temps d'attente,Zeitüberschreitung,Tempo limite,Таймаут,タイムアウト,타임아웃,انتهاء المهلة,Timeout,समयसीमा समाप्त,逾時
+连接,Connect,Conectar,Connecter,Verbinden,Conectar,Подключить,接続,연결,اتصال,Connetti,कनेक्ट,連線
+断开,Disconnect,Desconectar,Déconnecter,Trennen,Desconectar,Отключить,切断,연결 끊기,قطع الاتصال,Disconnetti,डिस्कनेक्ट,斷開
+重连,Reconnect,Reconectar,Reconnecter,Erneut verbinden,Reconectar,Переподключить,再接続,재연결,إعادة الاتصال,Riconnetti,पुनः कनेक्ट,重新連線
+提示,Hint,Aviso,Indication,Hinweis,Dica,Подсказка,ヒント,힌트,تلميح,Suggerimento,संकेत,提示
+验证码,Verification Code,Código de verificación,Code de vérification,Verifizierungscode,Código de verificação,Код подтверждения,認証コード,인증 코드,رمز التحقق,Codice di verifica,सत्यापन कोड,驗證碼
+会话,Session,Sesión,Session,Sitzung,Sessão,Сессия,セッション,세션,جلسة,Sessione,सत्र,工作階段
+令牌,Token,Token,Jeton,Token,Token,Токен,トークン,토큰,رمز,Token,टोकन,權杖
+表单,Form,Formulario,Formulaire,Formular,Formulário,Форма,フォーム,양식,نموذج,Modulo,फ़ॉर्म,表單
+字段,Field,Campo,Champ,Feld,Campo,Поле,フィールド,필드,حقل,Campo,फ़ील्ड,欄位
+必填,Required,Obligatorio,Obligatoire,Erforderlich,Obrigatório,Обязательно,必須,필수,إلزامي,Obbligatorio,अनिवार्य,必填
+可选,Optional,Opcional,Optionnel,Optional,Opcional,Необязательно,任意,선택,اختياري,Opzionale,वैकल्पिक,可選
