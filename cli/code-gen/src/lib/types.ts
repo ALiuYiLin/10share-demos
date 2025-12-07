@@ -7,6 +7,7 @@ export type GeneratorConfig = {
   skipIfExists?: boolean
   condition?: boolean | ((ctx: unknown) => boolean)
   postProcess?: (content: string, ctx: unknown) => string
+  children?: GeneratorConfig[]
 }
 
 export type CodeGenConfig = {
