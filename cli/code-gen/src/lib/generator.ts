@@ -36,6 +36,7 @@ export type GenerateResult = {
 export async function runGenerators(cfg: CodeGenConfig, opts: RunOptions, cwd: string): Promise<GenerateResult> {
   const res: GenerateResult = { generated: 0, skipped: 0, overwritten: 0, appended: 0, items: [] }
   const only = opts.only && opts.only.length ? new Set(opts.only) : null
+  const base = cfg.outputBase ?? "dist"
   for (const g of cfg.generators) {
     if (only && !only.has(g.name)) continue
     const ctx = await readData(g.data, cwd)
@@ -47,8 +48,8 @@ export async function runGenerators(cfg: CodeGenConfig, opts: RunOptions, cwd: s
     const tpl = Handlebars.compile(tplStr)
     const outTpl = Handlebars.compile(g.outFile)
     const relOut = outTpl(ctx)
-    const outPath = path.isAbsolute(relOut) ? relOut : (cfg.outputBase ? path.join(cfg.outputBase, relOut) : path.join(cwd, relOut))
-    if (!inBase(outPath, cfg.outputBase)) { res.skipped++; res.items.push({ name: g.name, outFile: outPath, reason: "out-of-base" }); continue }
+    const outPath = path.isAbsolute(relOut) ? relOut : path.join(base, relOut)
+    if (!inBase(outPath, base)) { res.skipped++; res.items.push({ name: g.name, outFile: outPath, reason: "out-of-base" }); continue }
     const rendered = tpl(ctx)
     const finalContent = g.postProcess ? g.postProcess(rendered, ctx) : rendered
     const exists = await fs.pathExists(outPath)
