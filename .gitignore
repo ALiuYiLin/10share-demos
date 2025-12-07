@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 ts-demo/node_modules
+vite-react/my-docs
+
 
 # Editor directories and files
 .vscode/*
