@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{title}}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 0.5rem 0; }
+    .done { color: #999; text-decoration: line-through; }
+  </style>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <h2>Todo List</h2>
+  <ul>
+    {{#each todos}}
+      <li class="{{#if this.done}}done{{/if}}">{{this.text}}</li>
+    {{/each}}
+  </ul>
+</body>
+</html>
